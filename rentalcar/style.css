@@ -1,37 +1,82 @@
 
 * {
-    font-family: "urbanist", sans-serif;
+    font-family: "Urbanist", sans-serif;
     font-style: normal;
     font-weight: 600;
     text-decoration: none;
 }
 
-header {
-    display: flex;
-    margin-right: 230px;
-    justify-content: center;
-    align-items: center;
-
+section {
+    margin: 0;
+    padding: 0;
 }
 
 .logo {
+    margin: 10px 25px;
     float: left;
     width: 220px;
     height: 120px;
     cursor: pointer;
-    cursor: hand;
     background-repeat: no-repeat;
     background-image: url(images/rentalcar-logo.png);
 }
 
-.navbar-nav{
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hr{
+    width: 100%;
+    height: 1px;
+    border: 1px;
+    background-color: gray;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 43vh;
+    padding: 0;
+     
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    font-size: 1.5em;
+    color: black;
+}
+
+.navbar-login {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-log {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-item{
-
     display:inline-block;
     margin: 30px;
+}
+.nav-item-reg{
+    display:inline-block;
+    margin: 30px;
+    background-color: #bd8f40;
+    padding: 15px;
+    border-radius: 50px;
 }
 
 .nav-link{
@@ -44,3 +89,44 @@ li:nth-of-type(0){
     display: block;
 }
 
+.nav-link {
+    font-size: 1.5em;
+    color: black;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0; /* Inicia com largura 0 para a linha */
+    height: 4px;
+    background-color: #bd8f40;
+    transition: width 0.3s ease;
+}
+
+.nav-item-reg {
+    display: inline-block;
+    margin: 30px;
+    background-color: #bd8f40;
+    padding: 15px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+.nav-item-reg:hover {
+    background-color: white; /* Muda a cor de fundo para branco ao passar o mouse */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Aumenta a largura da linha ao passar o mouse */
+}
+
+.navbar-login .nav-link::after {
+    background-color: transparent; /* Remove a linha do "Login In" e do "Register" */
+}
+
+.navbar-login .nav-link:hover::after {
+    background-color: #bd8f40; /* Adiciona a linha ao passar o mouse sobre o "Login In" e "Register" */
+}
