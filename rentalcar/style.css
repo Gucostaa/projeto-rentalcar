@@ -93,17 +93,31 @@ li:nth-of-type(0){
     font-size: 1.5em;
     color: black;
     position: relative;
+    text-decoration: none; /* Removendo o sublinhado padrão */
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -3px;
+    bottom: -5px; /* Posição inicial ajustada para 5px abaixo do fundo do link */
     left: 0;
-    width: 0; /* Inicia com largura 0 para a linha */
-    height: 4px;
-    background-color: #bd8f40;
-    transition: width 0.3s ease;
+    width: 100%; /* Começa com a largura completa */
+    height: 5px; /* Altura inicial da linha (já pronta) */
+    background-color: #bd8f40; /* Cor da linha */
+    transition: opacity 0.3s ease; /* Transição suave para a opacidade */
+    opacity: 0; /* Invisível por padrão */
+}
+
+.nav-link:hover::after {
+    opacity: 1; /* Torna a linha visível ao passar o mouse */
+}
+
+.navbar-login .nav-link::after {
+    background-color: transparent; /* Remove a linha do "Login In" e do "Register" */
+}
+
+.navbar-login .nav-link:hover::after {
+    background-color: #bd8f40; /* Adiciona a linha ao passar o mouse sobre o "Login In" e "Register" */
 }
 
 .nav-item-reg {
@@ -117,16 +131,4 @@ li:nth-of-type(0){
 
 .nav-item-reg:hover {
     background-color: white; /* Muda a cor de fundo para branco ao passar o mouse */
-}
-
-.nav-link:hover::after {
-    width: 100%; /* Aumenta a largura da linha ao passar o mouse */
-}
-
-.navbar-login .nav-link::after {
-    background-color: transparent; /* Remove a linha do "Login In" e do "Register" */
-}
-
-.navbar-login .nav-link:hover::after {
-    background-color: #bd8f40; /* Adiciona a linha ao passar o mouse sobre o "Login In" e "Register" */
 }
