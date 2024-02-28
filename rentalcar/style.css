@@ -6,7 +6,7 @@
     text-decoration: none;
 }
 
-section {
+.section1 {
     margin: 0;
     padding: 0;
 }
@@ -104,6 +104,7 @@ li:nth-of-type(0){
     width: 100%; /* Começa com a largura completa */
     height: 5px; /* Altura inicial da linha (já pronta) */
     background-color: #bd8f40; /* Cor da linha */
+    border-radius: 15px;
     transition: opacity 0.3s ease; /* Transição suave para a opacidade */
     opacity: 0; /* Invisível por padrão */
 }
@@ -131,4 +132,20 @@ li:nth-of-type(0){
 
 .nav-item-reg:hover {
     background-color: white; /* Muda a cor de fundo para branco ao passar o mouse */
+}
+
+aside {
+    margin-top: 220px;
+    width: 50%; /* Ajusta a largura para ocupar metade da largura da tela */
+    float: left;
+}
+
+.aside-content {
+    padding-right: 20px; /* Adiciona um espaçamento à direita para separar o texto da imagem */
+}
+
+.hyundai-car {
+    background-repeat: no-repeat;
+    float: right;
+    width: 50%; /* Ajusta a largura para ocupar metade da largura da tela */
 }
