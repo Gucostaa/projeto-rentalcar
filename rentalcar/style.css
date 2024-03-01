@@ -126,7 +126,7 @@ li:nth-of-type(0){
     margin: 30px;
     background-color: #fb4d2d;
     padding: 15px;
-    border-radius: 50px;
+    border-radius: 20px;
     transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
 }
 
@@ -140,12 +140,35 @@ aside {
     float: left;
 }
 
-.aside-content {
-    padding-right: 20px; /* Adiciona um espaçamento à direita para separar o texto da imagem */
-}
-
 .hyundai-car {
     background-repeat: no-repeat;
     float: right;
     width: 50%; /* Ajusta a largura para ocupar metade da largura da tela */
 }
+
+.aside-content {
+    margin-left: 150px;
+    margin-top: -150px;
+    float: left;
+}
+
+.htext {
+    color: #fb4d2d;
+}
+
+.p1 {
+    font-size: 2.5em;
+}
+
+.p2 {
+    font-size: 3.5em;
+}
+
+.aside-btn {
+}
+
+.aside-btn-list {
+    list-style: none;
+}
+
+
