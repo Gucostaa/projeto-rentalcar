@@ -126,7 +126,7 @@ li:nth-of-type(0){
     margin: 30px;
     background-color: #fb4d2d;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
 }
 
@@ -150,13 +150,14 @@ aside {
     margin-left: 150px;
     margin-top: -150px;
     float: left;
+    
 }
 
 .htext {
     color: #fb4d2d;
 }
 
-.p1 {
+.p1{
     font-size: 2.5em;
 }
 
@@ -165,10 +166,47 @@ aside {
 }
 
 .aside-btn {
+    margin-top: 25px; /* Adiciona margem superior para separar dos parágrafos */
+    margin-left: 150px;
 }
 
 .aside-btn-list {
     list-style: none;
+    margin-left: 0; /* Define margem esquerda para zero */
+    padding: 0;
 }
 
+.aside-btn-list li {
+    display: inline-block; /* Faz com que os itens da lista fiquem em linha */
+    margin-right: 10px; /* Adiciona margem direita para separar os botões */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.btn-book-virtual {
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px; /* Alinha verticalmente o texto ao centro */
+    font-size: 1.5em;
+    color: white;
+    background-color: #fb4d2d; /* Cor de fundo para o botão "Book Virtual" */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Adiciona borda arredondada */
+    cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+}
+
+.btn-leia-mais {
+    width: 200px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px; /* Alinha verticalmente o texto ao centro */
+    font-size: 1.5em;
+    color: white;
+    background-color: black; /* Cor de fundo para o botão "Leia Mais" */
+    border: none; /* Remove a borda */
+    border-radius: 10px; /* Adiciona borda arredondada */
+    cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+}
 
