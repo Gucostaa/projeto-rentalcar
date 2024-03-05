@@ -157,6 +157,10 @@ aside {
     color: #fb4d2d;
 }
 
+.p1, .p2 {
+    text-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+}
+
 .p1{
     font-size: 2.5em;
 }
@@ -208,5 +212,16 @@ aside {
     border: none; /* Remove a borda */
     border-radius: 10px; /* Adiciona borda arredondada */
     cursor: pointer; /* Muda o cursor ao passar sobre os botões */
+}
+
+.section2 {
+    margin-top: 50px; /* Adjusted margin-top value */
+    width: 85%;
+    margin-left: auto; /* Centering the section */
+    margin-right: auto; /* Centering the section */
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 15px;
 }
 
