@@ -12,77 +12,75 @@
 }
 
 .logo {
-    margin: 10px 25px;
+    margin: auto;
     float: left;
-    width: 220px;
-    height: 120px;
     cursor: pointer;
     background-repeat: no-repeat;
-    background-image: url(images/rentalcar-logo.png);
+    margin-right: 30vh;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Alinha verticalmente ao centro */
 }
 
-.hr{
-    width: 100%;
-    height: 1px;
-    border: 1px;
-    background-color: gray;
+.hr {
+    color: white;
+    background-color: white;
+    margin-bottom: 10vh;
+    margin-top: 3vh;
 }
+
 .navbar {
-    display: flex;
     align-items: center;
+    vertical-align: middle; /* Alinhar verticalmente ao centro */
+    margin: 0; /* Remover margens */
+    max-width: calc(100% - 245px); /* Ajuste conforme necessário para acomodar a logo */
 }
 
 .navbar-nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 43vh;
+    margin-right: 20vh;
     padding: 0;
-     
 }
 
 .nav-item {
     margin: 0 15px;
+    display: flex; /* Adicionado para os itens de navegação ficarem em linha */
 }
 
 .nav-link {
     font-size: 1.5em;
     color: black;
+    position: relative;
+    text-decoration: none;
+    margin-right: 10px; /* Adicionado para separar os itens de navegação */
 }
 
 .navbar-login {
     display: flex;
     align-items: center;
+    margin-top: 15px; /* Alterado para separar o bloco de login do bloco de navegação */
 }
 
 .navbar-log {
+    display: flex;
+    align-items: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.nav-item{
+.nav-item-reg {
     display:inline-block;
-    margin: 30px;
-}
-.nav-item-reg{
-    display:inline-block;
-    margin: 30px;
+    text-align: center;
+    margin: 0 15px; /* Ajustado para manter a distância igual entre os botões */
     background-color: #fb4d2d;
     padding: 15px;
     border-radius: 50px;
-}
-
-.nav-link{
-    font-size: 1.5em;
-    color: black;
-    
 }
 
 li:nth-of-type(0){
@@ -96,6 +94,13 @@ li:nth-of-type(0){
     text-decoration: none; /* Removendo o sublinhado padrão */
 }
 
+.nav-link-reg {
+    font-size: 1.5em;
+    width: 50px;
+    color: black;
+    position: relative;
+    text-decoration: none; /* Removendo o sublinhado padrão */
+}
 .nav-link::after {
     content: '';
     position: absolute;
@@ -169,6 +174,10 @@ aside {
     font-size: 3.5em;
 }
 
+.p3 {
+    margin-bottom: 6vh;
+}
+
 .aside-btn {
     margin-top: 25px; /* Adiciona margem superior para separar dos parágrafos */
     margin-left: 150px;
@@ -215,7 +224,7 @@ aside {
 }
 
 .section2 {
-    margin-top: 50px; /* Adjusted margin-top value */
+    margin-top: 10vh; /* Adjusted margin-top value */
     width: 85%;
     margin-left: auto; /* Centering the section */
     margin-right: auto; /* Centering the section */
@@ -224,4 +233,224 @@ aside {
     border-radius: 10px;
     padding: 15px;
 }
+
+.dropdown-container {
+    display: inline-block;
+    margin-right: 20px; /* Espaçamento entre os dropdown lists */
+}
+
+select {
+    width: 250px; /* Largura da dropdown list */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    border: 1px solid #ccc; /* Borda sólida com cor cinza claro */
+    background-color: #fff; /* Cor de fundo */
+}
+
+option {
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+button[type="submit"] {
+    padding: 12px 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    border: none; /* Remover a borda */
+    border-radius: 5px; /* Borda arredondada */
+    background-color: #fb4d2d; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+button[type="submit"]:hover {
+    background-color: #fb4d2d; /* Mudar a cor de fundo ao passar o mouse */
+}
+
+
+.login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 1; /* Garante que a tela de login esteja acima do resto do conteúdo */
+  }
+  
+  .login-popup-content {
+    background-color: #fefefe; /* Cor de fundo da tela de login */
+    margin: 15% auto; /* Centraliza a tela de login verticalmente e define margem nas laterais */
+    padding: 20px;
+    border: 1px solid #888; /* Borda fina ao redor da tela de login */
+    width: 80%; /* Largura da tela de login */
+    max-width: 400px; /* Largura máxima da tela de login */
+    border-radius: 10px; /* Cantos arredondados */
+    position: relative;
+  }
+  
+  .close-login {
+    color: #aaa; /* Cor do ícone de fechar */
+    float: right; /* Alinha o ícone de fechar à direita */
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-login:hover,
+  .close-login:focus {
+    color: black; /* Muda a cor do ícone ao passar o mouse ou focar */
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .plan-trip {
+    text-align: center;
+    margin-top: 15vh;
+    font-size: 1.5em;
+  }
+
+  .plan-rent {
+    text-align: center;
+    font-size: 2.5em;
+  }
+
+  div.container{
+    display:inline-block;
+    text-align: center;
+    margin-left: 32vh;
+  }
+
+  .container-title {
+    font-size: 1.4em;
+  }
+
+ .container-p {
+    inline-size: 150px;
+    overflow-wrap: break-word;
+    margin-left: 3vh;
+  }
+
+  .container-img {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    scroll-behavior: smooth;
+    transition: scroll-left 0.9s ease; /* Adicionando uma transição suave */
+  }
+  
+  .scroll-container img {
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .footer {
+    margin-top: 14vh;
+}
+
+/* Estilos para a seção de ofertas */
+.f-oferts {
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #fb4c2d5a;
+}
+
+.f-oferts h2 {
+    margin-right: 10vh;
+}
+
+/* Estilos para os campos de entrada de texto */
+.textbox {
+    width: 250px; /* Largura da dropdown list */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    border-radius: 5px; /* Borda arredondada */
+    border: 1px solid #ccc; /* Borda sólida com cor cinza claro */
+    background-color: #fff; /* Cor de fundo */
+    margin-right: 2vh;
+}
+
+/* Estilos para os botões de texto */
+.textbutton {
+    padding: 12px 20px; /* Espaçamento interno */
+    font-size: 18px; /* Tamanho da fonte */
+    border: none; /* Remover a borda */
+    border-radius: 5px; /* Borda arredondada */
+    background-color: #fb4d2d; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+/* Estilos para o segundo footer */
+.footer2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Estilos para as divisões de departamentos */
+.departments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.departments p {
+    font-weight: bold;
+}
+
+.contact p {
+    font-weight: bold;
+}
+
+.departments li {
+    list-style: none;
+}
+
+.departments div {
+    flex-basis: 20%;
+}
+
+/* Estilos para as informações de contato, redes sociais e download do aplicativo */
+.contact-info,
+.social-media,
+.app-download {
+    flex-basis: 30%;
+}
+
+/* Estilos para as informações do rodapé */
+.info-footer {
+    display: flex;
+}
+
+.social-footer {
+    display: flex;
+    margin-left: 135vh;
+}
+
+.app-download {
+    margin-left: 25vh;
+}
+
+
+
 
