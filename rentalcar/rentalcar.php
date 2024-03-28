@@ -211,13 +211,12 @@
   </section>
   <div class="container-img">
     <div class="scroll-container">
-      <img src="http://placehold.it/500x500" alt="Bhutan" />
-      <img src="http://placehold.it/500x500" alt="Bhutan" />
-      <img src="http://placehold.it/500x500" alt="Bhutan" />
-      <img src="http://placehold.it/500x500" alt="Bhutan" />
-      <img src="http://placehold.it/500x500" alt="Bhutan" />
-      <img src="http://placehold.it/500x500" alt="Bhutan" />
-      <img src="http://placehold.it/500x500" alt="Bhutan" />
+      <img src="images/hatch.png" alt="Hatch" />
+      <img src="images/sedan.png" alt="Sedan" />
+      <img src="images/suv.png" alt="SUV" />
+      <img src="images/crossover.png" alt="Crossover" />
+      <img src="images/minivan.png" alt="Minivan" />
+      <img src="images/picape.png" alt="Picape" />
     </div>
   </div>
 </section>
