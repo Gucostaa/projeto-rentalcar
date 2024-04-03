@@ -7,16 +7,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0" />
     <link rel="stylesheet" href="style.css">
     <script src="scroll.js"></script>
     <script src="cache.js"></script>
     <script src="script.js"></script>
+    <script src="popup.js"></script>
     <title>RentCar</title>
 </head>
 <body>
-  <section class="section1">
+  <section class="header-container">
   <div class="logo">
       <img src="images/rentcar150.png" alt="logo">
     </div>
@@ -41,17 +42,40 @@
               </ul>
             </nav>
             <nav>
-            <div class="navbar-login">
-              <ul class="navbar-log">
-                <li class="nav-item">
-                  <a href="#" target="_self" class="nav-link"><i class="faz fa-address-card"></i> Login</a>
-                </li>
-                <li class="nav-item-reg">
-                  <a href="#" target="_self" class="nav-link-reg"><i class="faz fa-file-alt"></i> Registre-se</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+            <div class="navbar-login">      
+                <div>               
+                  <button id="show-login" class="btn-login">Login</button>
+                </div>
+                <div>                                
+                  <button class="btn-register">Registre-se</button>
+                </div>
+
+                <div class="popup">
+                  <div class="close-btn">&times;</div>
+                  <div class="form">
+                    <h2>Login</h2>
+                      <div class="form-element">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" placeholder="Enter email">
+                      </div>
+                      <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter password">
+                      </div>
+                      <div class="form-element">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                      </div>
+                      <div class="form-element">
+                        <button>Entrar</button>
+                      </div>
+                      <div class="form-element">
+                        <a href="#">Esqueci a senha!</a>
+                      </div>
+                    </div>
+                </div>         
+              </div>
+            </nav>   
       </header>     
   </section>
   <div class="hr">
@@ -85,7 +109,8 @@
     </ul>
 </div>
 
-<section class="section2"> 
+<article>
+<section class="search-car"> 
     <h2>Selecione seu carro</h2>
     <form action="search.php" method="POST">
       <div class="dropdown-container">
@@ -174,6 +199,7 @@
       <button type="submit" id="searchButton">Buscar</button> <!-- Botão de busca -->
     </form>
   </section>
+  </article>
 
   <section>
     <div class="plan-trip">
@@ -200,7 +226,7 @@
     </div>
   </section>
 
-  <section class="carmodels">
+  <section>
   <section>
     <div class="plan-trip">
       <p>Modelos de<b class="htext"> veículos</b></p>
@@ -234,7 +260,7 @@
     </div>
 </footer>
 
-<footer class="footer2">
+<footer class="footer-departments">
 <div class="departments">
         <div>
           <p>Vendas</p>
