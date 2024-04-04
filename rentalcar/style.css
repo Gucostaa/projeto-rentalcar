@@ -65,7 +65,7 @@
     line-height: 70px; 
     font-size: 1.5em;
     color: white;
-    background-color: black; 
+    background-color: #222; 
     border: none; 
     border-radius: 10px; 
     cursor: pointer; 
@@ -108,11 +108,15 @@ button[type="submit"]:hover {
     line-height: 70px; 
     font-size: 1.5em;
     color: white;
-    background-color: black; 
+    background-color: #222; 
     border: none; 
     border-radius: 10px; 
     cursor: pointer; 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.btn-register a {
+    color: white;
 }
 
 /*login popup*/
@@ -120,10 +124,10 @@ button[type="submit"]:hover {
 .popup {
     position: absolute;
     top: 38%;
-    left: 85%;
+    left: 87.5%;
     opacity: 0;
     transform:translate(-50%, -50%) scale(1.25);
-    width: 380px;
+    width: 400px;
     padding: 20px 30px;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -134,22 +138,21 @@ button[type="submit"]:hover {
 }
 
 .popup.active {
-    top: 50%;
+    top: 33%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     transition: top 0ms ease-in-out 0ms,
-                opacity 0ms ease-in-out 0ms,
-                transform 0ms ease-in-out 0ms
+                opacity 200ms ease-in-out 0ms,
+                transform 200ms ease-in-out 0ms;
 }
 
 .popup .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 15px;
-    height: 15px;
-    background: #888;
-    color: #eee;
+    width: 25px;
+    height: 25px;
+    color: #222;
     text-align: center;
     line-height: 15px;
     border-radius: 15px;
@@ -176,7 +179,7 @@ button[type="submit"]:hover {
 .popup .form .form-element input[type="password"] {
     margin-top: 5px;
     display: block;
-    width: 100%;
+    width: 94%;
     padding: 10px;
     outline: none;
     border: 1px solid #aaa;
@@ -202,8 +205,8 @@ button[type="submit"]:hover {
 .popup .form .form-element a {
     display: block;
     text-align: right;
-    font-size: 15px;
-    color: #1a79ca;
+    font-size: 18px;
+    color: #fb4d2d;
     text-decoration: none;
     font-weight: 600;
 }
@@ -249,7 +252,7 @@ header {
 
 .nav-link {
     font-size: 1.5em;
-    color: black;
+    color: #222;
     position: relative;
     text-decoration: none;
     margin-right: 10px; 
@@ -286,7 +289,7 @@ header {
 
 .nav-link {
     font-size: 1.5em;
-    color: black;
+    color: #222;
     position: relative;
     text-decoration: none; 
 }
@@ -294,7 +297,7 @@ header {
 .nav-link-reg {
     font-size: 1.5em;
     width: 50px;
-    color: black;
+    color: #222;
     position: relative;
     text-decoration: none;
 }

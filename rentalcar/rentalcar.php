@@ -10,10 +10,6 @@
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0" />
     <link rel="stylesheet" href="style.css">
-    <script src="scroll.js"></script>
-    <script src="cache.js"></script>
-    <script src="script.js"></script>
-    <script src="popup.js"></script>
     <title>RentCar</title>
 </head>
 <body>
@@ -47,27 +43,27 @@
                   <button id="show-login" class="btn-login">Login</button>
                 </div>
                 <div>                                
-                  <button class="btn-register">Registre-se</button>
+                  <button class="btn-register"><a href="register.php" target="_blank">Registre-se</a></button>
                 </div>
-
+                
                 <div class="popup">
                   <div class="close-btn">&times;</div>
                   <div class="form">
                     <h2>Login</h2>
                       <div class="form-element">
                         <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Enter email">
+                        <input type="text" id="email" placeholder="Enter email" required>
                       </div>
                       <div class="form-element">
                         <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Enter password">
+                        <input type="password" id="password" placeholder="Enter password" required>
                       </div>
                       <div class="form-element">
                         <input type="checkbox" id="remember-me">
                         <label for="remember-me">Remember me</label>
                       </div>
                       <div class="form-element">
-                        <button>Entrar</button>
+                        <button type="submit">Entrar</button>
                       </div>
                       <div class="form-element">
                         <a href="#">Esqueci a senha!</a>
@@ -379,6 +375,11 @@
       </div>
     </div>
 </footer>
+
+<script src="scroll.js"></script>
+<script src="cache.js"></script>
+<script src="script.js"></script>
+<script src="popup.js"></script>
 
 </body>
 </html>
