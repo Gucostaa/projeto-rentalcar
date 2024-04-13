@@ -37,41 +37,49 @@
                 </li>
               </ul>
             </nav>
-            <nav>
-            <div class="navbar-login">      
-                <div>               
-                  <button id="show-login" class="btn-login">Login</button>
-                </div>
-                <div>                                
-                  <button class="btn-register"><a href="register.php" target="_blank">Registre-se</a></button>
-                </div>
+            
+    <div class="navbar-login">      
+    <div>               
+        <button id="show-login" class="btn-login">Login</button>
+    </div>
+    <div>                                
+        <button class="btn-register"><a href="register.php" target="_blank">Registre-se</a></button>
+    </div>
                 
-                <div class="popup">
-                  <div class="close-btn">&times;</div>
-                  <div class="form">
-                    <h2>Login</h2>
-                      <div class="form-element">
-                        <label for="email">Email</label>
-                        <input type="text" id="email" placeholder="Enter email" required>
-                      </div>
-                      <div class="form-element">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Enter password" required>
-                      </div>
-                      <div class="form-element">
-                        <input type="checkbox" id="remember-me">
-                        <label for="remember-me">Remember me</label>
-                      </div>
-                      <div class="form-element">
-                        <button type="submit">Entrar</button>
-                      </div>
-                      <div class="form-element">
-                        <a href="#">Esqueci a senha!</a>
-                      </div>
-                    </div>
-                </div>         
-              </div>
-            </nav>   
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <form action="login.php" method="post" target="_blank">
+                <h2>Login</h2>
+                <div class="form-element">
+                    <label for="email">User</label>
+                    <input type="text" name="usuario" id="user" placeholder="Enter email" required>
+                </div>
+                <div class="form-element">
+                    <label for="password">Password</label>
+                    <input type="password" name="senha" id="password" placeholder="Enter password" required>
+                </div>
+                <div class="form-element">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <div class="form-element">
+                    <button type="submit" id="btn">Entrar</button>
+                </div>
+                <div class="form-element">
+                    <a href="#">Esqueci a senha!</a>
+                </div>
+            </form>   
+        </div>     
+    </div>
+</div>
+
+<div id="alert" class="alert">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <p id="alertMessage">Usuário ou senha incorretos. Tente novamente.</p>
+</div>
+
+             
       </header>     
   </section>
   <div class="hr">
@@ -380,6 +388,8 @@
 <script src="cache.js"></script>
 <script src="script.js"></script>
 <script src="popup.js"></script>
+<script src="login.js"></script>
+<script src="alert.js"></script>
 
 </body>
 </html>

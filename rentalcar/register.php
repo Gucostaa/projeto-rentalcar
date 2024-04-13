@@ -80,16 +80,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($senha !== $csenha) {
         echo "A senha e a confirmação da senha não coincidem.";
     } else {
-        // Criptografar a senha
-        $hashedPassword = password_hash($senha, PASSWORD_DEFAULT);
-
+        // Gerar hash da senha
+        $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+        
         // Preparar e executar a consulta SQL para inserir dados
-        $stmt = $con->prepare("INSERT INTO clientes (nome, usuario, email, telefone, senha, genero,data_inclusao) VALUES (:nome, :usuario, :email, :telefone, :senha, :genero,:data_inclusao)");
+        $stmt = $con->prepare("INSERT INTO clientes (nome, usuario, email, telefone, senha, genero, data_inclusao) VALUES (:nome, :usuario, :email, :telefone, :senha, :genero, :data_inclusao)");
         $stmt->bindParam(':nome', $nome);
         $stmt->bindParam(':usuario', $usuario);
         $stmt->bindParam(':email', $email);
         $stmt->bindParam(':telefone', $telefone);
-        $stmt->bindParam(':senha', $hashedPassword);
+        $stmt->bindParam(':senha', $senha_hash); // Salvar o hash da senha no banco de dados
         $stmt->bindParam(':genero', $genero);
         $stmt->bindParam(':data_inclusao', $data_inclusao);
 
@@ -104,3 +104,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+

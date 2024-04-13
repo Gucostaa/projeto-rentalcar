@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .htext {
     color: #fb4d2d;
 }
@@ -209,6 +213,28 @@ button[type="submit"]:hover {
     color: #fb4d2d;
     text-decoration: none;
     font-weight: 600;
+}
+
+/* alert */
+
+.alert {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da; 
+    color: #721c24; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
+    display: none; 
+}
+
+.alert-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
 }
 
 /*header*/
