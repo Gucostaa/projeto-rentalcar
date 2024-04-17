@@ -38,7 +38,7 @@
               </ul>
             </nav>
             <div class="profile">
-              <img href="" src="images/profile.png" alt="profile">
+              <a href="profile.php"><img src="images/profile.png"></a>
             </div>
       </header>     
   </section>
