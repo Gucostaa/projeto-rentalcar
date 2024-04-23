@@ -46,43 +46,10 @@
         <button class="btn-register"><a href="register.php" target="_blank">Registre-se</a></button>
     </div>
                 
-<?php
-include 'dbconnect.php';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
-
-    try {
-        $query = "SELECT * FROM clientes WHERE usuario = :usuario LIMIT 1";
-        $statement = $con->prepare($query);
-        $statement->bindParam(':usuario', $usuario);
-        $statement->execute();
-        $user = $statement->fetch(PDO::FETCH_ASSOC);
-
-        if ($user) { // Verifica se o usuário existe
-            if (password_verify($senha, $user['senha'])) { // Verifica a senha
-                echo "Login bem-sucedido. Bem-vindo, " . $user['usuario'] . "!";
-                header('Location: logged.php');
-                exit(); // Importante: encerra a execução do script após redirecionar
-            } else {
-                // Exibe um alerta de login inválido usando JavaScript
-                echo "<script>alert('Usuário ou senha incorretos. Tente novamente.');</script>";
-            }
-        } else {
-            // Exibe um alerta de login inválido usando JavaScript
-            echo "<script>alert('Usuário ou senha incorretos. Tente novamente.');</script>";
-        }
-    } catch (PDOException $e) {
-        echo "Erro: " . $e->getMessage();
-    }
-}
-?>
-
 <div class="popup">
-    <div class="close-btn">&times;</div>
+  <div class="close-btn">&times;</div>
     <div class="form">
-        <form method="post">
+        <form id="loginForm" method="post">
             <h2>Login</h2>
             <div class="form-element">
                 <label for="email">User</label>
@@ -97,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="remember-me">Remember me</label>
             </div>
             <div class="form-element">
-                <button type="submit" id="btn">Entrar</button>
+                <button type="button" id="btn">Entrar</button>
             </div>
             <div class="form-element">
                 <a href="#">Esqueci a senha!</a>
@@ -419,6 +386,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <script src="scroll.js"></script>
 <script src="script.js"></script>
 <script src="popup.js"></script>
+<script src="submit.js"></script>
 
 </body>
 </html>
