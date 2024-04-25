@@ -9,7 +9,7 @@
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0" />
-    <link rel="stylesheet" href="logged.css">
+    <link rel="stylesheet" href="CSS/logged.css">
     <title>RentCar</title>
 </head>
 <body>

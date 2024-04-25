@@ -9,7 +9,7 @@
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache"/>
     <meta http-equiv="expires" content="0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/rentcar.css">
     <title>RentCar</title>
 </head>
 <body>
@@ -383,10 +383,10 @@
     </div>
 </footer>
 
-<script src="scroll.js"></script>
-<script src="script.js"></script>
-<script src="popup.js"></script>
-<script src="submit.js"></script>
+<script src="JavaScript/scroll.js"></script>
+<script src="JavaScript/script.js"></script>
+<script src="JavaScript/popup.js"></script>
+<script src="JavaScript/submit.js"></script>
 
 </body>
 </html>

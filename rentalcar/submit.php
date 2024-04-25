@@ -1,6 +1,8 @@
 <?php
 include 'dbconnect.php';
 
+session_start(); // Inicia a sessão
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senha'];
@@ -14,6 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($user) { // Verifica se o usuário existe
             if (password_verify($senha, $user['senha'])) { // Verifica a senha
+                // Armazena o ID do usuário na sessão
+                $_SESSION['user_id'] = $user['id']; // Supondo que o ID do usuário seja 'id'
+
                 echo json_encode(array("success" => true, "message" => "Login bem-sucedido. Bem-vindo, " . $user['usuario'] . "!"));
                 exit(); // Importante: encerra a execução do script após retornar a resposta
             } else {
