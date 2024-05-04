@@ -31,6 +31,7 @@ $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
 <div class="container">
+<a href="logged.php"><img class="return" src="images/return.png" alt="return"></a>
     <div class="image">
         <?php if(isset($cliente['caminho_imagem']) && !empty($cliente['caminho_imagem'])): ?>
             <img id="show-login" src="<?php echo $cliente['caminho_imagem']; ?>" alt="">

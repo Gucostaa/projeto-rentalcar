@@ -112,6 +112,10 @@ image {
     cursor: pointer;
 }
 
+.return {
+    position: absolute;
+}
+
 .image img {
     height: 350px;
     width: 350px;

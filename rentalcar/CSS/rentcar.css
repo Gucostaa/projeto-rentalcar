@@ -10,6 +10,7 @@
 
 body {
     overflow-x: hidden;
+    margin: 0;
 }
 
 .htext {
@@ -493,14 +494,42 @@ div.container{
 /*footer*/
 
 .footer {
-    margin-top: 14vh;
+    background-color: #222;
 }
 
-.footer-departments {
+footer .footer-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    color: white;
+}
+
+footer .footer-container ul {
+    width: 25%;
+}
+
+footer .footer-container h3 {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+footer .footer-container .social-media img {
+    margin-right: 10px;
+}
+
+footer .footer-container ul > p {
+    margin-bottom: 40px;
+}
+
+footer .footer-container li {
+    margin: 8px 8px;
+    list-style: none;
+}
+
+footer .footer-container a {
+    color: white;
+}
+
+.footer-oferts {
+    margin-top: 14vh;
 }
 
 .f-oferts {
@@ -508,7 +537,7 @@ div.container{
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #fb4c2d5a;
+    background-color: #fdbfb7;
 }
 
 .f-oferts h2 {
@@ -536,48 +565,7 @@ div.container{
     transition: background-color 0.3s ease; 
 }
 
-.departments {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 60%;
-}
 
-.departments p {
-    font-weight: bold;
-}
-
-.departments li {
-    list-style: none;
-}
-
-.departments div {
-    flex-basis: 20%;
-}
-
-.contact p {
-    font-weight: bold;
-}
-
-.contact-info,
-.social-media,
-.app-download {
-    flex-basis: 30%;
-}
-
-.info-footer {
-    display: flex;
-}
-
-.social-footer {
-    display: flex;
-    margin-left: 135vh;
-}
-
-.app-download {
-    margin-left: 25vh;
-}
 
 
 

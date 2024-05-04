@@ -224,130 +224,49 @@
     </div>
 </footer>
 
-<footer class="footer-departments">
-<div class="departments">
-        <div>
-          <p>Vendas</p>
-            <li>Carros Novos</li>
-            <li>Carros Usados</li>
-            <li>Leasing e Financiamento</li>
-            <li>Venda de Hatch</li>
-            <li>Venda de SUV</li>
-            <li>Venda de Sedan</li>
-            <li>Venda de Crossover</li>
-            <li>Venda de Minivan</li>
-            <li>Venda de Picape</li>
-        </div>
-        <div>
-            <p>Serviços</p>           
-            <li>Manutenção e Reparos</li>
-            <li>Assistência 24 horas</li>
-            <li>Estética Automotiva</li>
-            <li>Personalização</li>
-            <li>Seguro Veicular</li>
-            <li>Consultoria de Compra</li>
-            <li>Test Drive</li>
-            <li>Garantia Estendida</li>
-            <li>Revisão de Documentação</li>
-            <li>Troca de Peças</li>
-            <li>Inspeção Veicular</li>
-            <li>Reparo de Pneus</li>
-            <li>Diagnóstico Eletrônico</li>
-        </div>
-        <div>
-            <p>Acessórios</p> 
-            <li>GPS</li>
-            <li>Cadeirinha de Bebê</li>
-            <li>Assento de Elevação</li>
-            <li>Porta-Bicicletas</li>
-            <li>Bagageiro de Teto</li>
-            <li>Câmera de Ré</li>
-            <li>Sensor de Estacionamento</li>
-            <li>Engate de Reboque</li>
-            <li>Capota Marítima</li>
-            <li>Estribo Lateral</li>
-            <li>Faróis de LED</li>
-            <li>Kit de Ferramentas</li>
-            <li>Protetor de Cárter</li>
-            <li>Alarme Veicular</li>
-            <li>Central Multimídia</li>         
-        </div>
-        <div>
-            <p>Atendimento ao Cliente</p>           
-            <li>Fale Conosco</li>
-            <li>Política de Troca</li>
-            <li>Perguntas Frequentes</li>
-            <li>Comentários e Sugestões</li>
-            <li>Feedback do Cliente</li>
-            <li>Cancelamento de Pedido</li>
-            <li>Devolução de Produto</li>
-            <li>Suporte Técnico</li>
-            <li>Reclamações</li>
-            <li>Reservas e Agendamentos</li>
-            <li>Feedback de Serviço</li>
-            <li>Relatório de Erros</li>
-            <li>Política de Reembolso</li>
-            <li>Política de Privacidade</li>
-            <li>Termos de Uso</li>
-        </div>
-        <div>
-            <p>Informações Legais</p>
-            <li>Termos de Serviço</li>
-            <li>Política de Privacidade</li>
-            <li>Termos de Garantia</li>
-            <li>Avisos Legais</li>
-            <li>Política de Cookies</li>
-            <li>Política de Devolução</li>
-            <li>Política de Reembolso</li>
-            <li>Política de Entrega</li>
-            <li>Termos e Condições</li>
-            <li>Direitos Autorais</li>
-            <li>Política de Segurança</li>
-            <li>Leis de Proteção ao Consumidor</li>
-            <li>Leis de Propriedade Intelectual</li>
-            <li>Leis de Defesa do Consumidor</li>
-        </div>
-        <!-- Adicione mais itens conforme necessário -->
-    </div>
-    <div class="contact">
-        <p>Horário de Atendimento:</p>
-        <p>08:00 às 20:00 - Segunda a Sábado, horário local (Exceto domingo e feriados)</p>
-        <div class="info-footer">
-            <p>Endereço:</p>
-            <p>Rua Principal, 1234 - Centro</p>
-            <p>Cidade, Estado - CEP: 12345-678</p>
-        </div>
-        <div class="info-footer">
-            <p>Central de Atendimento:</p>
-            <p>(00) 1234-5678</p> <!-- Adicionando espaço após os dois pontos -->
-        </div>
-        <div class="info-footer">
-            <p>Email:</p>
-            <p>contato@rentcar.com</p> <!-- Adicionando espaço após os dois pontos -->
-        </div>
-        <div>
-        <p>Redes Sociais:</p>
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-        </ul>
-      </div>
-      <div>
-        <p>Baixe nosso App:</p>
-        <ul>
-            <li><a href="#">iOS</a></li>
-            <li><a href="#">Android</a></li>
-        </ul>
-      </div>
-    </div>
+<footer class="footer">
+  <div class="footer-container">
+    <ul>
+      <h3>RentCar</h3>  
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto nisi possimus pariatur delectus quia.</p>
+      <div class="social-media">
+      <img src="images/instagram.png" alt="instagram">
+        <img src="images/facebook.png" alt="facebook">
+        <img src="images/twitter.png" alt="twitter">
+        <img src="images/linkedin.png" alt="linkedin">
+      </div>        
+    </ul>
+      <ul>
+      <h3>Links</h3>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Preços</a></li>
+        <li><a href="#">Baixar</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Servicos</a></li>
+      </ul>
+
+      <ul>
+      <h3>Suporte</h3>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Como Funciona</a></li>
+        <li><a href="#">Características</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Comunicação</a></li>
+      </ul>
+
+      <ul>
+      <h3>Contato</h3>
+        <li><a href="#">+55 19 93333-3333</a></li>
+        <li><a href="#">RentCar@outlook.com</a></li>
+        <li><a href="#">Brasil</a></li>
+      </ul>
+  </div>
 </footer>
 
-<script src="scroll.js"></script>
-<script src="cache.js"></script>
-<script src="script.js"></script>
-<script src="popup.js"></script>
+<script src="JavaScript/scroll.js"></script>
+<script src="JavaScript/cache.js"></script>
+<script src="JavaScript/script.js"></script>
+<script src="JavaScript/popup.js"></script>
 
 </body>
 </html>
