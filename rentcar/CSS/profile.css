@@ -122,6 +122,8 @@ image {
     border-radius: 50%;
     display: block;
     margin: 50px auto;
+    border: 2px solid #222;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .popup-image img {
@@ -130,12 +132,14 @@ image {
     border-radius: 50%;
     display: block;
     margin: 50px auto;
+    border: 2px solid #222;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .popup {
     position: absolute;
     top: 38%;
-    left: 87.5%;
+    left: 84%;
     opacity: 0;
     transform:translate(-50%, -50%) scale(1.25);
     width: 400px;
@@ -149,7 +153,7 @@ image {
 }
 
 .popup.active {
-    top: 33%;
+    top: 40%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     transition: top 0ms ease-in-out 0ms,

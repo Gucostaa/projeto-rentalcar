@@ -100,15 +100,15 @@
         <p>Economize muito mais <b class="htext">comprando</b> na RentCar!</p>
       </div>
       <div class="p3">
-        <p>Apresentamos a RentCar, especializada em vendas de carros usados. Nossa missão é oferecer veículos de qualidade a preços competitivos, com um serviço personalizado e dedicado à satisfação do cliente em todas as etapas da compra.
+        <p>Apresentamos a RentCar, especializada em vendas de carros usados. Nossa missão <br> é oferecer veículos de qualidade a preços competitivos, com um serviço personalizado <br> e dedicado à satisfação do cliente em todas as etapas da compra.
         </p>
       </div>
     </div>
   </aside>
 <div class="aside-btn">
     <ul class="aside-btn-list">
-        <li><button type="button" class="btn-book-virtual">Book Virtual</button></li>
-        <li><button type="button" class="btn-leia-mais">Leia Mais</button></li>
+        <li><button type="button" class="btn-test-drive">Test Drive</button></li>
+        <li><button type="button" class="btn-veiculos">Veículos</button></li>
     </ul>
 </div>
 
@@ -212,20 +212,22 @@
     <div class="plan-rent">
       <p>Na <b class="htext">RentCar</b> com Agilidade e Segurança</p>     
     </div>
-    <div class="container">
-      <img src="images/img1.png" height="200" width="200" />
-      <p class="container-title">Selecione seu carro<p>
-      <p class="container-p"> Escolha entre uma variedade de veículos paraatender às suas necessidades.</p>
-    </div>
-    <div class="container">
-      <img src="images/img2.png" height="200" width="200" />
-      <p class="container-title">Contate o operador</p>
-      <p class="container-p"> Entre em contato com nossos operadores para obter assistência na sua compra.</p>
-    </div>
-    <div class="container">
-      <img src="images/img3.png" height="200" width="200" />
-      <p class="container-title">Vamos dirigir!</p>
-      <p class="container-p"> Desfrute da sua nova aquisição e dasatisfação de ter feito uma ótima escolha!</p>
+    <div class="container-wrapper">
+      <div class="container">
+        <img src="images/img1.png" height="200" width="200" />
+        <p class="container-title">Selecione seu carro<p>
+        <p class="container-p"> Escolha entre uma variedade de veículos para atender às suas necessidades.</p>
+      </div>
+      <div class="container">
+        <img src="images/img2.png" height="200" width="200" />
+        <p class="container-title">Contate o operador</p>
+        <p class="container-p"> Entre em contato com nossos operadores para obter assistência na sua compra.</p>
+      </div>
+      <div class="container">
+        <img src="images/img3.png" height="200" width="200" />
+        <p class="container-title">Vamos dirigir!</p>
+        <p class="container-p"> Desfrute da sua nova aquisição e dasatisfação de ter feito uma ótima escolha!</p>
+      </div>
     </div>
   </section>
 
@@ -267,7 +269,7 @@
   <div class="footer-container">
     <ul>
       <h3>RentCar</h3>  
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto nisi possimus pariatur delectus quia.</p>
+      <p>Siga-nos nas redes sociais para acesso antecipado a descontos, promoções relâmpago e novidades irresistíveis.</p>
       <div class="social-media">
       <img src="images/instagram.png" alt="instagram">
         <img src="images/facebook.png" alt="facebook">

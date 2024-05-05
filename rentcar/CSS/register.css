@@ -120,6 +120,23 @@ h2 {
     background-image: linear-gradient(to right, #fb4d2d, #fb4d2d);
 }
 
+.success-message {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.failure-message {
+    background-color: #f0d8d8;
+    color: #763c3c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
 @media(max-width:600px) {
     .container{
         min-width: 280px;

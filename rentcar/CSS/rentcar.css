@@ -50,7 +50,7 @@ body {
 
 /*buttons*/
 
-.btn-book-virtual {
+.btn-test-drive {
     width: 200px;
     height: 70px;
     text-align: center;
@@ -63,7 +63,7 @@ body {
     cursor: pointer; 
 }
 
-.btn-leia-mais {
+.btn-veiculos {
     width: 200px;
     height: 70px;
     text-align: center;
@@ -450,11 +450,24 @@ aside {
     font-size: 2.5em;
 }
 
-div.container{
-    display:inline-block;
+div.container {
+    display: inline-block;
     text-align: center;
-    margin-left: 32vh;
+    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
 }
+
+div.container {
+    text-align: center;
+    margin: 0 20vh; /* Margem entre os contêineres */
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    height: 65vh; /* Altura total da janela de visualização */
+}
+
 
 .container-title {
     font-size: 1.4em;
@@ -470,6 +483,7 @@ div.container{
     overflow-x: hidden;
     position: relative;
     width: 100%;
+    margin-bottom: 25vh;
 }
   
 .scroll-container {
