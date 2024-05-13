@@ -21,7 +21,7 @@
           <nav>
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a href="#" target="_self" class="nav-link"><i class="faz fa-address-card"></i> Sobre Nós</a>
+                  <a href="about.php" target="_blank" class="nav-link"><i class="faz fa-address-card"></i> Sobre Nós</a>
                 </li>
                 <li class="nav-item">
                   <a href="#" target="_self" class="nav-link"><i class="faz fa-file-alt"></i> Veículos</a>
@@ -36,7 +36,7 @@
                   <a href="#" target="_self" class="nav-link"><i class="faz fa-envelope"></i> FAQ</a>
                 </li>
               </ul>
-            </nav>
+          </nav>
             
     <div class="navbar-login">      
     <div>               
