@@ -85,11 +85,11 @@ $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
             </div>
             <div class="input-box">
                 <label for="senha">Senha</label>
-                <input type="password" placeholder="Digite a nova senha" name="senha" value="">
+                <input type="password" placeholder="Digite a nova senha" name="senha" value="" readonly>
             </div>
             <div class="input-box">
                 <label for="genero">Gênero</label>
-                <select name="genero" class="styled-select">
+                <select name="genero" class="styled-select" readonly>
                     <option value="Masculino" <?php if ($cliente['genero'] === 'Masculino') echo 'selected'; ?>>Masculino</option>
                     <option value="Feminino" <?php if ($cliente['genero'] === 'Feminino') echo 'selected'; ?>>Feminino</option>
                     <option value="Outro" <?php if ($cliente['genero'] === 'Outro') echo 'selected'; ?>>Outro</option>
@@ -98,10 +98,86 @@ $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
         </div>
         <div class="button-container">
             <button class="edit" type="button" onclick="editProfile()">Editar</button>
-            <button class="save" type="button"  onclick="saveProfile()">Salvar</button>
+            <button class="save" type="button" disabled onclick="saveProfile()">Salvar</button>
         </div>
     </form>
 </div>
+
+<script>
+    var generoOriginal = '<?php echo $cliente['genero']; ?>'; // Armazenar o valor original do gênero
+
+    function editProfile() {
+    // Habilitar a edição dos campos
+    var inputs = document.querySelectorAll('input[readonly]');
+    inputs.forEach(function(input) {
+        input.removeAttribute('readonly');
+    });
+
+    // Habilitar a edição do campo de senha
+    document.querySelector('input[name="senha"]').removeAttribute('readonly');
+
+    // Habilitar a edição do campo de gênero
+    var selectGenero = document.querySelector('select[name="genero"]');
+    for (var i = 0; i < selectGenero.options.length; i++) {
+        selectGenero.options[i].disabled = false;
+    }
+
+    // Ativar o botão de salvar
+    document.querySelector('.save').removeAttribute('disabled');
+
+    // Ocultar o botão de editar
+    document.querySelector('.edit').style.display = 'none';
+}
+
+function saveProfile() {
+    // Obter os valores dos campos
+    var nome = document.querySelector('input[name="nome"]').value;
+    var usuario = document.querySelector('input[name="usuario"]').value;
+    var email = document.querySelector('input[name="email"]').value;
+    var telefone = document.querySelector('input[name="telefone"]').value;
+    var senha = document.querySelector('input[name="senha"]').value;
+    var genero = document.querySelector('select[name="genero"]').value;
+
+    // Verificar se houve alterações nos campos de senha e gênero
+    var senhaModificada = senha !== ''; // Se a senha não estiver vazia, foi modificada
+    var generoModificado = genero !== generoOriginal; // Verificar se o gênero foi modificado
+
+    // Enviar os dados para o script PHP via AJAX apenas se foram modificados
+    if (senhaModificada || generoModificado) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'update-profile.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Exibir uma mensagem ou redirecionar o usuário após a atualização
+                alert(xhr.responseText);
+                // Limpar o campo de senha após salvar os dados do perfil
+                document.querySelector('input[name="senha"]').value = '';
+
+                // Recarregar a página após a atualização (opcional)
+                location.reload();
+            }
+        };
+        xhr.send('nome=' + encodeURIComponent(nome) + '&usuario=' + encodeURIComponent(usuario) + '&email=' + encodeURIComponent(email) + '&telefone=' + encodeURIComponent(telefone) + '&senha=' + encodeURIComponent(senha) + '&genero=' + encodeURIComponent(genero));
+    } else {
+        // Se nenhum campo foi modificado, apenas retornar
+        alert("Nenhuma modificação feita.");
+    }
+
+    // Desativar o botão de salvar após salvar os dados
+    document.querySelector('.save').setAttribute('disabled', 'disabled');
+}
+
+// Desabilitar as opções de gênero, exceto a originalmente selecionada
+document.addEventListener("DOMContentLoaded", function() {
+    var selectGenero = document.querySelector('select[name="genero"]');
+    for (var i = 0; i < selectGenero.options.length; i++) {
+        if (selectGenero.options[i].value !== generoOriginal) {
+            selectGenero.options[i].disabled = true;
+        }
+    }
+});
+</script>
 
 <script src="JavaScript/upload-image.js"></script>
 <script src="JavaScript/profile-popup.js"></script>

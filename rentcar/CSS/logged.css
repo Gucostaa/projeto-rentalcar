@@ -20,8 +20,6 @@ body {
 .hr {
     color: white;
     background-color: white;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
 }
 
 .p1, .p2 {
@@ -216,28 +214,6 @@ button[type="submit"]:hover {
     font-weight: 600;
 }
 
-/* alert */
-
-.alert {
-    position: absolute;
-    top: 20%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-    background-color: #f8d7da; 
-    color: #721c24; 
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
-    display: none; 
-}
-
-.alert-btn {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    cursor: pointer;
-}
-
 /*header*/
 
 .logo {
@@ -252,6 +228,23 @@ button[type="submit"]:hover {
     cursor: pointer;
     background-repeat: no-repeat;
 }
+
+.profile-image-container {
+    width: 100px; /* Defina a largura desejada para o contêiner da imagem */
+    height: 100px; /* Defina a altura desejada para o contêiner da imagem */
+    overflow: hidden; /* Ocultar qualquer conteúdo que exceda as dimensões do contêiner */
+    margin-bottom: 3vh;
+    border-radius: 50%;
+    border: 1px solid #222;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.profile-image {
+    width: 100%; /* Garantir que a imagem ocupe 100% da largura do contêiner */
+    height: auto; /* Permitir que a altura da imagem seja ajustada automaticamente de acordo com a largura */
+    display: block; /* Garantir que a imagem seja exibida como um bloco */
+}
+
 
 header {
     display: flex;
@@ -274,6 +267,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 15vh;
     padding: 0;
 }
 
@@ -450,10 +444,22 @@ aside {
     font-size: 2.5em;
 }
 
-div.container{
-    display:inline-block;
+div.container {
+    display: inline-block;
     text-align: center;
-    margin-left: 32vh;
+    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
+}
+
+div.container {
+    text-align: center;
+    margin: 0 20vh; /* Margem entre os contêineres */
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    height: 65vh; /* Altura total da janela de visualização */
 }
 
 .container-title {
@@ -470,6 +476,7 @@ div.container{
     overflow-x: hidden;
     position: relative;
     width: 100%;
+    margin-bottom: 25vh;
 }
   
 .scroll-container {
@@ -564,6 +571,29 @@ footer .footer-container a {
     cursor: pointer; 
     transition: background-color 0.3s ease; 
 }
+
+/* Cardzinho */
+
+.car {
+    display: inline-block;
+    width: 325px;
+    height: 480px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 15px;
+    margin-top: 5vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car-info {
+    padding: 10px;
+}
+
+.card-img-top {
+    max-width: 100%; 
+    height: auto; 
+}
+
 
 
 

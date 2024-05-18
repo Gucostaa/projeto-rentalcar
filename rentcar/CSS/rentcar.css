@@ -21,6 +21,7 @@ body {
     color: white;
     background-color: white;
     margin-bottom: 10vh;
+    margin-top: 10vh;
 }
 
 .p1, .p2 {
@@ -49,7 +50,7 @@ body {
 
 /*buttons*/
 
-.btn-book-virtual {
+.btn-test-drive {
     width: 200px;
     height: 70px;
     text-align: center;
@@ -62,7 +63,7 @@ body {
     cursor: pointer; 
 }
 
-.btn-leia-mais {
+.btn-veiculos {
     width: 200px;
     height: 70px;
     text-align: center;
@@ -213,6 +214,28 @@ button[type="submit"]:hover {
     color: #fb4d2d;
     text-decoration: none;
     font-weight: 600;
+}
+
+/* alert */
+
+.alert {
+    position: absolute;
+    top: 20%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-color: #f8d7da; 
+    color: #721c24; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
+    display: none; 
+}
+
+.alert-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
 }
 
 /*header*/
@@ -427,11 +450,24 @@ aside {
     font-size: 2.5em;
 }
 
-div.container{
-    display:inline-block;
+div.container {
+    display: inline-block;
     text-align: center;
-    margin-left: 32vh;
+    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
 }
+
+div.container {
+    text-align: center;
+    margin: 0 20vh; /* Margem entre os contêineres */
+}
+
+.container-wrapper {
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    height: 65vh; /* Altura total da janela de visualização */
+}
+
 
 .container-title {
     font-size: 1.4em;
@@ -447,6 +483,7 @@ div.container{
     overflow-x: hidden;
     position: relative;
     width: 100%;
+    margin-bottom: 25vh;
 }
   
 .scroll-container {
@@ -541,6 +578,8 @@ footer .footer-container a {
     cursor: pointer; 
     transition: background-color 0.3s ease; 
 }
+
+
 
 
 

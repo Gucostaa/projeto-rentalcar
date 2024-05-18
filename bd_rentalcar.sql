@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 03/05/2024 às 03:08
+-- Tempo de geração: 18/05/2024 às 02:48
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -37,18 +37,6 @@ CREATE TABLE `ano` (
 --
 
 INSERT INTO `ano` (`id`, `nome`) VALUES
-(11, '2010'),
-(12, '2011'),
-(13, '2012'),
-(14, '2013'),
-(15, '2014'),
-(16, '2015'),
-(17, '2016'),
-(18, '2017'),
-(19, '2018'),
-(20, '2019'),
-(21, '2020'),
-(22, '2021'),
 (23, '2022'),
 (24, '2023'),
 (25, '2024');
@@ -72,6 +60,28 @@ CREATE TABLE `carros` (
   `preco` decimal(10,2) DEFAULT NULL,
   `quilometragem` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `carros`
+--
+
+INSERT INTO `carros` (`id`, `marca_id`, `cor_id`, `tipo_id`, `ano_id`, `acessorios`, `cambio`, `caminho_imagem`, `nome`, `preco`, `quilometragem`) VALUES
+(1, 1, 3, 1, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som', 'Manual', 'polo-track.png', 'Polo Robust', 89290.00, 0.00),
+(2, 1, 5, 1, 25, 'Ar condicionado, direção elétrica, airbags, controle de estabilidade', 'Automático', 'polo-robust.png\r\n', 'Polo Track', 89290.00, 0.00),
+(7, 1, 1, 1, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som', 'Manual', 'polo-mpi.png', 'Polo MPI Branco', 89290.00, 0.00),
+(8, 1, 5, 1, 25, 'Ar condicionado, direção elétrica, airbags, controle de estabilidade', 'Automático', 'polo-tsi.png', 'Polo TSI Prata', 89290.00, 0.00),
+(9, 1, 2, 1, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som', 'Manual', 'polo-sense.png', 'Polo Sense Cinza', 89290.00, 0.00),
+(10, 1, 2, 1, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som, controle de estabilidade', 'Automático', 'comfortline.png', 'Comfortline Cinza', 89290.00, 0.00),
+(11, 1, 6, 1, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som, controle de estabilidade', 'Automático', 'highline.png', 'Highline Vermelho', 89290.00, 0.00),
+(12, 1, 6, 1, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som, controle de estabilidade, teto solar panorâmico', 'Automático', 'gts250-tsi.png', 'GTS 250 TSI Vermelho', 99990.00, 0.00),
+(13, 1, 2, 2, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som', 'Manual', 'virtus-tsi.png', 'Virtus TSI', 89290.00, 25.00),
+(14, 1, 1, 2, 25, 'Ar condicionado, direção elétrica, airbags, controle de estabilidade', 'Automático', 'virtus-comfortline.png', 'Virtus Comfortline', 89290.00, 25.00),
+(15, 1, 4, 2, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som', 'Manual', 'virtus-highline.png', 'Virtus Highline', 89290.00, 25.00),
+(16, 1, 3, 2, 25, 'Ar condicionado, direção elétrica, airbags, controle de estabilidade', 'Automático', 'virtus-exclusive.png', 'Virtus Exclusive', 89290.00, 25.00),
+(17, 1, 6, 2, 25, 'Ar condicionado, direção elétrica, airbags, controle de estabilidade', 'Automático', 'jetta-gli.png', 'Jetta GLI 350 TSI', 89290.00, 25.00),
+(18, 1, 1, 3, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som', 'Manual', 'nivus-sense.png', 'Nivus Sense 200 TSI', 89290.00, 25.00),
+(19, 1, 4, 3, 25, 'Ar condicionado, direção elétrica, airbags, controle de estabilidade', 'Automático', 'nivus-comfortline.png', 'Nivus Comfortline 200 TSI', 89290.00, 25.00),
+(20, 1, 3, 3, 25, 'Ar condicionado, direção elétrica, airbags, sistema de som', 'Manual', 'nivus-highline.png', 'Nivus Highline 200 TSI', 89290.00, 25.00);
 
 -- --------------------------------------------------------
 
@@ -97,7 +107,8 @@ CREATE TABLE `clientes` (
 
 INSERT INTO `clientes` (`id`, `nome`, `usuario`, `email`, `telefone`, `senha`, `genero`, `data_inclusao`, `caminho_imagem`) VALUES
 (1, 'Gabriel', 'GaybrielXD', 'gabalmeidayasper@outlook.com', '+55 19 99996666', '$2y$10$Z83MudfBbpKf8cILmnpvhOsvzuFqS1Z97Eo/hyAcYrLODswkeEweu', '', '2024-04-24 00:00:00', NULL),
-(2, 'Nathy Neon', 'Nathy', '', '', '$2y$10$SH8TV0CMrRyJ0K5TB5PvdOakXUgSh0T6oR8DzHg5bmknknXPwBCbm', 'M', '2024-04-25 00:00:00', 'images/picape.png');
+(2, 'Nathy Neon', 'Nathy', 'naty@gmail.com', '19 99998 8888', '$2y$10$pqJFOpWpNNSujRECfw6ZPuy9Pu9AOvIwY4tPh0gd9zYCu6aM9fZHS', 'M', '2024-04-25 00:00:00', 'images/homilindo.png'),
+(3, 'Andre', 'Andrelindo', 'Andrealmeida@gmail.com', '19 22222 2222', '$2y$10$a0x0v/hk0L/Te/c0M/dH4uCdhB3r21DPZKAvzf88KyxWJa2aa5buO', 'M', '2024-05-06 00:00:00', NULL);
 
 -- --------------------------------------------------------
 
@@ -142,17 +153,7 @@ CREATE TABLE `marca` (
 --
 
 INSERT INTO `marca` (`id`, `nome`) VALUES
-(1, 'Volkswagen'),
-(2, 'Fiat'),
-(3, 'Chevrolet'),
-(4, 'Hyundai'),
-(5, 'Toyota'),
-(6, 'Jeep'),
-(7, 'Renault'),
-(8, 'Honda'),
-(9, 'Nissan'),
-(10, 'Peugeot'),
-(11, 'Citroen');
+(1, 'Volkswagen');
 
 -- --------------------------------------------------------
 
@@ -172,10 +173,7 @@ CREATE TABLE `tipo` (
 INSERT INTO `tipo` (`id`, `nome`) VALUES
 (1, 'Hatch'),
 (2, 'Sedan'),
-(3, 'SUV'),
-(4, 'Crossover'),
-(5, 'Minivan'),
-(6, 'Picape');
+(3, 'SUV');
 
 --
 -- Índices para tabelas despejadas
@@ -235,13 +233,13 @@ ALTER TABLE `ano`
 -- AUTO_INCREMENT de tabela `carros`
 --
 ALTER TABLE `carros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de tabela `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `cor`
