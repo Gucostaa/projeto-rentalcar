@@ -1,0 +1,77 @@
+* {
+    font-family: "Urbanist", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.water {
+    position: relative;
+}
+
+.water h1 {
+    font-size: 5em;
+    color: #fff;
+    
+}
+
+.container {
+    margin: 50px 50px;
+    max-width: 1860px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container > section {
+    flex: 0 0 calc(33.33% - 20px); /* Define a largura de cada seção para ocupar um terço do espaço disponível com uma margem de 20px entre elas */
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 20px;
+    background-color: #222;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 200px; /* Defina uma altura mínima para as caixas de texto */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.toggleable-text > p {
+    width: 300px;
+    height: 300px;
+    display: inline;
+}
+
+h2 {
+    margin-top: 0;
+    color: #fb4d2d;
+}
+
+p {
+    line-height: 1.6;
+    color: white;
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.background-image:hover {
+    opacity: 0.8;
+}
