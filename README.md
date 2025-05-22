@@ -19,6 +19,7 @@ Este projeto foi desenvolvido como parte de uma atividade educacional com o obje
 🔎 Pesquisa de veículos   
 🚘 Exibição de modelos   
 📱 Layout responsivo
+
 👤 Perfil com edição de dados 
 
 ## 🧱 Stack Tecnológica
